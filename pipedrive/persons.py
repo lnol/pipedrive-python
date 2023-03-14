@@ -37,3 +37,7 @@ class Persons(object):
     def get_person_activities(self, person_id, **kwargs):
         url = "persons/{}/activities".format(person_id)
         return self._client._get(self._client.BASE_URL + url, **kwargs)
+    
+    def get_person_updates(self, person_id, **kwargs):
+        url = "persons/{}/flow".format(person_id)
+        return self._client._get(self._client.BASE_URL + url, **kwargs)
